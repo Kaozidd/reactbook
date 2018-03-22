@@ -1,28 +1,254 @@
-.App {
+*.
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; 
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 44px;
+  background-color: #4267B2;
+  align-items: center;
+}
+
+.header__search {
+  display: flex;
+  flex-grow: 1;
+}
+
+.header__search .fa-facebook-official {
+  font-size: 28px;
+  color: #FFF;
+  margin-left: 20px;
+  padding: 0 5px;
+}
+
+.header__search__searchBar {
+  height: 25px;
+  width: 70%;
+  background-color: #FFF;
+  border: 1px solid #3B5998;
+  border-radius: 8px; 
+  display: flex;
+}
+
+.header__search__searchBar input {
+  border: none;
+  flex-grow: 9;
+  padding-left: 5px;
+  border-radius: 2px 0 0 2px;
+  color: #C4C6CD;
+}
+
+.header__search__searchBar .fa-search {
+  flex-grow: 1;
+  color: #4E5665;
+  background-color: #F6F7F9;
+  border-radius: 0 2px 2px 0;
   text-align: center;
+  line-height: 22px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.header__options {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.header__options__image {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
 }
 
-.App-title {
-  font-size: 1.5em;
+.header__options__menu {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-.App-intro {
-  font-size: large;
+.header__options__menu li {
+  display: inline-block;
+  margin: 0;
+  padding: 0 10px;
+  border-right: 1px solid #3B5C9F;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.header__options__menu a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #FFF;
+  font-weight: bold;
+}
+
+.header__options__iconMenu {
+  list-style-type: none;
+}
+
+.header__options__iconMenu li {
+  display: inline-block;
+  margin: 0 5px;
+  color: #1A2946;
+  font-size: 20px;
+}
+
+.header__options__settings {
+  list-style-type: none;
+  margin-left: 10px;
+  padding-left: 15px;
+  border-left: 1px solid #3B5C9F;
+}
+
+.header__options__settings li {
+  display: inline-block;
+  color: #1A2946;
+  font-size: 20px;
+  padding-right: 15px;
+}
+
+.post__container {
+  border: 1px solid #DDDEF2;
+  width: 524px;
+  border-radius: 5px;
+  position: relative;
+  left: 20%;
+  margin-top: 10px;
+}
+
+.banner {
+  border-bottom: 1px solid #DDDEF2;
+  background-color: #F7F7F9;
+}
+
+.banner__select {
+  list-style-type: none;
+  padding: 8px 5px;
+  margin: 0;
+}
+
+.banner__select li {
+  display: inline-block;
+  font-size: 12px;
+  padding: 0 5px;
+  border-right: 1px solid #DDDEF2;
+}
+
+.banner__select li:last-of-type {
+  border-right: none;
+}
+
+.banner__select li a {
+  color: #365899;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.banner__select .fa {
+  color: black;
+}
+
+.writePost {
+  padding: 12px;
+  padding-bottom: 0;
+}
+
+.writePost__post {
+  display: flex;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #DDDEF2;
+}
+
+.writePost__post__image {
+  width: 40px;
+  height: auto;
+}
+
+.writePost__post__input {
+  border: none;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.writePost__footer__list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 7px 0;
+}
+
+.writePost__footer__list li {
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: #F7F7F9;
+  border-radius: 20px;
+  margin-right: 8px;
+}
+
+.writePost__footer__list a {
+  text-decoration: none;
+  color: #444;
+}
+
+.writePost__footer__list .fa-picture-o {
+  color: green;
+}
+
+.writePost__footer__list .fa-smile-o {
+  color: yellow;
+}
+
+.post {
+  border: 1px solid #DDDEF2;
+  padding: 12px; 
+  width: 500px;
+  border-radius: 5px;
+  position: relative;
+  left: 20%;
+  margin-top: 10px;
+}
+
+.post__image {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.post__header {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.post__header .fa-globe {
+  color: #AAACD9;
+}
+
+.post__actions {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #DDDEF2;
+  padding-top: 15px;
+  margin-bottom: 0;
+}
+
+.post__actions li {
+  width: 30%;
+}
+
+.post__actions li a {
+  text-decoration: none;
+  color: #444;
 }
